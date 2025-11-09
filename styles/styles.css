@@ -1,0 +1,47 @@
+/* W02 Assignment: Home Page Enhancement CSS */
+
+/* 1. Limit the width of the main content */
+main {
+  max-width: 840px;
+  /* Added a margin to center the content for better visualization */
+  margin: 0 auto; 
+}
+
+/* 2. Style the aside element */
+aside {
+  width: 20rem; /* Sets a fixed width */
+  margin: 1rem; /* Adds margin around the aside box */
+  /* Preferred border color format: subtle, transparent black */
+  border: 1px solid rgb(0 0 0 / 0.2); 
+  padding: 1rem; /* Adds space inside the aside box */
+  background-color: #eee; /* Light gray background */
+  color: #333; /* Dark gray text color */
+  text-align: center; /* Centers text content (h2, p) */
+}
+
+/* 3. Style the image inside the aside */
+aside img {
+  width: 200px; /* Sets a fixed width for the aside image */
+  height: auto; /* Ensures the image aspect ratio is maintained, preventing distortion */
+}
+
+/* 4. Style the profile image (inside main) */
+main img {
+  width: 150px; /* Sets a specific width for the profile image */
+  height: auto; /* Maintains aspect ratio */
+  /* Example: Add a little spacing after the profile image */
+  margin-bottom: 10px; 
+}
+
+/* 5. Change the padding for all paragraph elements */
+p { 
+    /* No units needed for 0 value */
+    padding: 0; 
+}
+
+/* 6. Style the footer element */
+footer {
+  margin-top: 15px; /* Adds space between main/aside and the footer */
+  border-top: 1px solid #000; /* Adds a solid black line above the footer */
+  text-align: center; /* Centers the footer text */
+}
