@@ -7,33 +7,43 @@ body {
   color: #000;
 }
 
-/* Header and Navigation */
-header {
-  background-color: #f4f4f4;
+/* ✅ Shared max-width for header, .grid, and footer */
+header, .grid, footer {
+  max-width: 840px;
+  margin: 0 auto;
   padding: 1rem;
-  text-align: center;
 }
 
+/* Navigation with Flexbox */
 nav {
   background-color: #f4f4f4;
+  display: flex;          /* ✅ Flex container */
+  justify-content: space-between; /* ✅ Even spacing */
+  align-items: center;
   padding: 0.5rem 1rem;
 }
 
 nav a {
   color: #007bff;
-  padding: 0.5rem 1rem;
-  display: block;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;         /* ✅ Block with padding */
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
+/* ✅ Bottom border on h1 */
+h1 {
+  color: #333;
+  border-bottom: 2px solid #000; /* Add bottom border */
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+}
+
 /* Main content */
 main {
-  max-width: 840px;
-  margin: 0 auto;
   padding: 1rem;
 }
 
@@ -45,24 +55,24 @@ main img {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* H1 styling */
-h1 {
-  color: #333;
-}
-
 /* Paragraph reset */
 p {
   padding: 0;
   margin: 1rem 0;
 }
 
+/* ✅ CSS Grid layout for .grid */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* aside (1fr) on left, main (2fr) on right */
+  gap: 1rem;
+}
+
 /* Aside styling */
 aside {
-  width: 20rem;
-  margin: 1rem auto;
+  background-color: #eee;
   border: 1px solid rgb(0 0 0 / 0.2);
   padding: 1rem;
-  background-color: #eee;
   color: #333;
   text-align: center;
 }
@@ -75,8 +85,6 @@ aside img {
 
 /* Footer styling */
 footer {
-  margin-top: 15px;
   border-top: 1px solid #000;
   text-align: center;
-  padding: 1rem;
 }
