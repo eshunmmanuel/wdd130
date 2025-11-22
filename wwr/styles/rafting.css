@@ -1,22 +1,22 @@
 /* W03: Rafting Site — About Us Page Styles */
 
-/* Step 3: Define CSS custom properties in :root */
+/* Define CSS custom properties */
 :root {
-  --primary-color: #1a5d1a;        /* Deep green for headings */
-  --accent1-color: #333;           /* Dark gray for body text */
-  --background-color: #f8f9fa;     /* Light background */
+  --primary-color: #1a5d1a;
+  --accent1-color: #333;
+  --background-color: #f8f9fa;
   --heading-font: 'Georgia', 'Times New Roman', serif;
   --body-font: 'Arial', sans-serif;
 }
 
-/* Step 4: Universal selector reset */
+/* ✅ REQUIRED: Universal selector reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Step 5: Body text and color */
+/* Body styles */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
@@ -24,7 +24,7 @@ body {
   line-height: 1.6;
 }
 
-/* Step 6: Limit and center header, main, footer */
+/* Layout container */
 header,
 main,
 footer {
@@ -33,7 +33,7 @@ footer {
   padding: 0 16px;
 }
 
-/* Step 7: Heading styles */
+/* Headings */
 h1,
 h2 {
   font-family: var(--heading-font);
@@ -41,7 +41,7 @@ h2 {
   margin: 16px 0;
 }
 
-/* Step 8: Consistent spacing */
+/* Spacing */
 nav,
 p,
 section,
@@ -50,7 +50,7 @@ article {
   padding: 8px 0;
 }
 
-/* Header layout */
+/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -69,7 +69,7 @@ nav a {
   font-weight: bold;
 }
 
-/* Hero section */
+/* Hero */
 .hero {
   position: relative;
   width: 100%;
