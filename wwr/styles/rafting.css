@@ -1,9 +1,9 @@
 /* W03: Rafting Site — About Us Page Styles */
+
 /* Step 3: Define CSS custom properties in :root */
 :root {
   --primary-color: #1a5d1a;        /* Deep green for headings */
   --accent1-color: #333;           /* Dark gray for body text */
-  --accent2-color: #d4af37;        /* Gold/yellow accent */
   --background-color: #f8f9fa;     /* Light background */
   --heading-font: 'Georgia', 'Times New Roman', serif;
   --body-font: 'Arial', sans-serif;
@@ -30,7 +30,7 @@ main,
 footer {
   width: 840px;
   margin: 0 auto;
-  padding: 0 16px; /* Prevents content from touching edges */
+  padding: 0 16px;
 }
 
 /* Step 7: Heading styles */
@@ -106,7 +106,6 @@ nav a {
   max-width: 600px;
 }
 
-/* Step 5 in Hero: Float image right */
 .hero article img {
   float: right;
   width: 125px;
@@ -123,7 +122,6 @@ footer {
   text-align: center;
 }
 
-/* Step 9: Remove underline from social media links */
 .socialmedia a {
   text-decoration: none;
 }
