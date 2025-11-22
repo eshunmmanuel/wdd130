@@ -42,7 +42,7 @@ p {
 
 aside {
   width: 20rem;
-  margin: 1rem;
+  margin: 1rem auto;
   border: 1px solid rgb(0 0 0 / 0.2);
   padding: 1rem;
   background-color: #eee;
