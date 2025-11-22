@@ -1,3 +1,4 @@
+/* General reset */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -6,22 +7,30 @@ body {
   color: #000;
 }
 
+/* Header and Navigation */
 header {
   background-color: #f4f4f4;
   padding: 1rem;
   text-align: center;
 }
 
+nav {
+  background-color: #f4f4f4;
+  padding: 0.5rem 1rem;
+}
+
 nav a {
-  margin: 0 1rem;
-  text-decoration: none;
   color: #007bff;
+  padding: 0.5rem 1rem;
+  display: block;
+  text-decoration: none;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
+/* Main content */
 main {
   max-width: 840px;
   margin: 0 auto;
@@ -31,15 +40,23 @@ main {
 main img {
   width: 150px;
   height: auto;
-  display: block;
-  margin: 1rem 0;
+  border: 2px solid #ddd;
+  padding: 5px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* H1 styling */
+h1 {
+  color: #333;
+}
+
+/* Paragraph reset */
 p {
   padding: 0;
   margin: 1rem 0;
 }
 
+/* Aside styling */
 aside {
   width: 20rem;
   margin: 1rem auto;
@@ -56,6 +73,7 @@ aside img {
   margin: 0.5rem 0;
 }
 
+/* Footer styling */
 footer {
   margin-top: 15px;
   border-top: 1px solid #000;
