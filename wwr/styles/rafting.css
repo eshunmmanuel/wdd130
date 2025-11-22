@@ -9,7 +9,7 @@
   --body-font: 'Arial', sans-serif;
 }
 
-/* ✅ REQUIRED: Universal selector reset */
+/* Universal selector reset */
 * {
   margin: 0;
   padding: 0;
