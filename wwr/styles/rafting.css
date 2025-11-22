@@ -1,0 +1,158 @@
+/* W03: Rafting Site - About Us Page Styles */
+/* Define CSS custom properties (variables) */
+:root {
+  --primary-color: #1a5d1a;      /* Deep green for headings */
+  --accent1-color: #333;         /* Dark gray for body text */
+  --accent2-color: #d4af37;      /* Gold/yellow for highlights */
+  --background-color: #f8f9fa;   /* Light background */
+  --heading-font: 'Georgia', 'Times New Roman', serif;
+  --body-font: 'Arial', sans-serif;
+}
+
+/* Universal reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  background-color: var(--background-color);
+}
+
+/* Center and limit width of main page sections */
+header,
+main,
+footer {
+  width: 840px;
+  margin: 0 auto;
+}
+
+/* Typography */
+h1,
+h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin: 16px 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+/* Consistent spacing for content elements */
+nav,
+p,
+section,
+article {
+  margin: 16px;
+  padding: 8px;
+}
+
+/* Header logo and navigation */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+header img {
+  height: 60px; /* Adjust based on your logo */
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--accent2-color);
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.9;
+  background-color: var(--accent1-color);
+  color: #fff;
+  font-size: 2.2rem;
+}
+
+.hero article {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 16px;
+  border-radius: 8px;
+  max-width: 600px;
+}
+
+.hero article img {
+  float: right;
+  width: 125px;
+  height: auto;
+  margin: 0 0 10px 15px;
+  border-radius: 4px;
+}
+
+/* Adventure section */
+section h2 {
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 2px solid var(--primary-color);
+  text-align: center;
+}
+
+footer p {
+  margin-bottom: 10px;
+}
+
+/* Social media icons */
+.socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: 32px;
+}
