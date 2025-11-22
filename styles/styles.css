@@ -1,45 +1,70 @@
-/* W02 Assignment: Home Page Enhancement CSS */
+/* General reset and body styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+}
 
-/* 1. Style the main content area */
+/* Header and Navigation */
+header {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #007bff;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main content */
 main {
-  /* Limit the width of the main selector */
   max-width: 840px;
-  /* Optional but highly recommended: Center the main content block */
   margin: 0 auto;
+  padding: 1rem;
 }
 
-/* 2. Style the aside element (the country/state box) */
-aside {
-  width: 20rem; /* Set a specific width */
-  margin: 1rem; /* Add margin around the element */
-  /* Border using RGBa for a subtle, transparent effect */
-  border: 1px solid rgb(0 0 0 / 0.2); 
-  padding: 1rem; /* Add padding inside the element */
-  background-color: #eee; /* Set light background color */
-  color: #333; /* Set dark text color */
-  text-align: center; /* Center the text content */
-}
-
-/* 3. Style the image inside the aside */
-aside img {
-  width: 200px; /* Set a fixed width */
-  height: auto; /* Maintain the image's aspect ratio */
-}
-
-/* 4. Style the profile image (inside main) */
 main img {
-  width: 150px; /* Set a specific width for the profile image */
+  width: 150px;
   height: auto;
+  display: block;
+  margin: 1rem 0;
 }
 
-/* 5. Change paragraph padding */
-p { 
-  padding: 0; 
+/* Paragraph reset */
+p {
+  padding: 0;
+  margin: 1rem 0;
 }
 
-/* 6. Style the footer */
+/* Aside styling */
+aside {
+  width: 20rem;
+  margin: 1rem auto;
+  border: 1px solid rgb(0 0 0 / 0.2);
+  padding: 1rem;
+  background-color: #eee;
+  color: #333;
+  text-align: center;
+}
+
+aside img {
+  width: 200px;
+  height: auto;
+  margin: 0.5rem 0;
+}
+
+/* Footer styling */
 footer {
-  margin-top: 15px; /* Add top margin for separation */
-  border-top: 1px solid #000; /* Add a top border */
-  text-align: center; /* Center the footer text */
+  margin-top: 15px;
+  border-top: 1px solid #000;
+  text-align: center;
+  padding: 1rem;
 }
