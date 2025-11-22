@@ -1,37 +1,39 @@
-/* W03: Rafting Site - About Us Page Styles */
-/* Define CSS custom properties (variables) */
+/* W03: Rafting Site — About Us Page Styles */
+/* Step 3: Define CSS custom properties in :root */
 :root {
-  --primary-color: #1a5d1a;      /* Deep green for headings */
-  --accent1-color: #333;         /* Dark gray for body text */
-  --accent2-color: #d4af37;      /* Gold/yellow for highlights */
-  --background-color: #f8f9fa;   /* Light background */
+  --primary-color: #1a5d1a;        /* Deep green for headings */
+  --accent1-color: #333;           /* Dark gray for body text */
+  --accent2-color: #d4af37;        /* Gold/yellow accent */
+  --background-color: #f8f9fa;     /* Light background */
   --heading-font: 'Georgia', 'Times New Roman', serif;
   --body-font: 'Arial', sans-serif;
 }
 
-/* Universal reset */
+/* Step 4: Universal selector reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Base body styles */
+/* Step 5: Body text and color */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
   background-color: var(--background-color);
+  line-height: 1.6;
 }
 
-/* Center and limit width of main page sections */
+/* Step 6: Limit and center header, main, footer */
 header,
 main,
 footer {
   width: 840px;
   margin: 0 auto;
+  padding: 0 16px; /* Prevents content from touching edges */
 }
 
-/* Typography */
+/* Step 7: Heading styles */
 h1,
 h2 {
   font-family: var(--heading-font);
@@ -39,24 +41,16 @@ h2 {
   margin: 16px 0;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 1.8rem;
-}
-
-/* Consistent spacing for content elements */
+/* Step 8: Consistent spacing */
 nav,
 p,
 section,
 article {
-  margin: 16px;
-  padding: 8px;
+  margin: 16px 0;
+  padding: 8px 0;
 }
 
-/* Header logo and navigation */
+/* Header layout */
 header {
   display: flex;
   justify-content: space-between;
@@ -65,7 +59,7 @@ header {
 }
 
 header img {
-  height: 60px; /* Adjust based on your logo */
+  height: 60px;
 }
 
 nav a {
@@ -73,10 +67,6 @@ nav a {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
-}
-
-nav a:hover {
-  color: var(--accent2-color);
 }
 
 /* Hero section */
@@ -99,9 +89,9 @@ nav a:hover {
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.9;
   background-color: var(--accent1-color);
-  color: #fff;
+  color: white;
+  opacity: 0.9;
   font-size: 2.2rem;
 }
 
@@ -116,17 +106,13 @@ nav a:hover {
   max-width: 600px;
 }
 
+/* Step 5 in Hero: Float image right */
 .hero article img {
   float: right;
   width: 125px;
   height: auto;
   margin: 0 0 10px 15px;
   border-radius: 4px;
-}
-
-/* Adventure section */
-section h2 {
-  text-align: center;
 }
 
 /* Footer */
@@ -137,17 +123,7 @@ footer {
   text-align: center;
 }
 
-footer p {
-  margin-bottom: 10px;
-}
-
-/* Social media icons */
-.socialmedia {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-
+/* Step 9: Remove underline from social media links */
 .socialmedia a {
   text-decoration: none;
 }
@@ -155,4 +131,5 @@ footer p {
 .socialmedia img {
   width: 32px;
   height: 32px;
+  margin: 0 8px;
 }
