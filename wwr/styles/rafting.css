@@ -1,4 +1,4 @@
-/* W03: Rafting Site — About Us Page Styles */
+/* W04: Rafting Site — About Us Page Styles */
 
 /* Define CSS custom properties */
 :root {
@@ -9,7 +9,7 @@
   --body-font: 'Arial', sans-serif;
 }
 
-/* Universal selector reset */
+/* ✅ REQUIRED: Universal selector reset */
 * {
   margin: 0;
   padding: 0;
@@ -50,10 +50,11 @@ article {
   padding: 8px 0;
 }
 
-/* Header */
+/* Header layout using CSS Grid */
 header {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 20px;
   align-items: center;
   padding: 16px 0;
 }
@@ -62,14 +63,20 @@ header img {
   height: 60px;
 }
 
+/* Navigation using Flexbox */
+nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
 nav a {
-  margin-left: 20px;
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
 }
 
-/* Hero */
+/* Hero section */
 .hero {
   position: relative;
   width: 100%;
@@ -114,12 +121,55 @@ nav a {
   border-radius: 4px;
 }
 
+/* History section */
+.history {
+  padding: 20px 0;
+}
+
+/* Adventures section with 5 images */
+.adventures {
+  padding: 20px 0;
+}
+
+.adventures .gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.adventures figure {
+  flex: 1 1 calc(20% - 10px);
+  min-width: 120px;
+  text-align: center;
+}
+
+.adventures img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.adventures figcaption {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: var(--primary-color);
+}
+
 /* Footer */
 footer {
   margin-top: 30px;
   padding: 20px 0;
   border-top: 2px solid var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 15px;
 }
 
 .socialmedia a {
@@ -129,5 +179,4 @@ footer {
 .socialmedia img {
   width: 32px;
   height: 32px;
-  margin: 0 8px;
 }
