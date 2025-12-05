@@ -23,6 +23,9 @@
     </header>
 
     <main>
+        <!-- ✅ REQUIRED: Add <h1> as first element in <main> -->
+        <h1>Exciting Expeditions</h1>
+
         <!-- Company Contact Info Section -->
         <section class="contact-info">
             <h2>We Are Here to Serve You</h2>
@@ -32,7 +35,7 @@
                 <p>📞 +233 544 999 999</p>
                 <p>✉️ <a href="mailto:info@excitingexpeditions.com">info@excitingexpeditions.com</a></p>
 
-                <!-- Embedded Google Map -->
+                <!-- Embedded Google Map (✅ style="border:0" is already removed) -->
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50687.379504849174!2d-113.23073397048638!3d37.43802090018532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ca91afad231a8f%3A0xec6734a36c88eb1f!2sKolob%20Canyons!5e0!3m2!1sen!2sgh!4v1764952638150!5m2!1sen!2sgh"
                     width="100%" height="250" allowfullscreen loading="lazy"
@@ -50,7 +53,7 @@
                     <p><strong>Alex Morgan</strong><br>River Guide</p>
                 </div>
                 <div class="employee">
-                    <img src="images/employee2.png" alt="Safety Officer - Taylor Kim">
+                    <img src="images/employee2.png" alt="Safety Officer - Miriam Kim">
                     <p><strong>Miriam Kim</strong><br>Safety Officer</p>
                 </div>
                 <div class="employee">
@@ -71,21 +74,25 @@
                 <input type="email" id="email" name="email" required>
 
                 <p><strong>Purpose</strong></p>
-                <label>
-                    <input type="radio" name="purpose" value="general" required> General Inquiry
+                <!-- ✅ Added id attributes to radio buttons -->
+                <label for="purpose-general">
+                    <input type="radio" id="purpose-general" name="purpose" value="general" required> General Inquiry
                 </label><br>
-                <label>
-                    <input type="radio" name="purpose" value="reservation"> Reservation Question
+                <label for="purpose-reservation">
+                    <input type="radio" id="purpose-reservation" name="purpose" value="reservation"> Reservation
+                    Question
                 </label><br>
-                <label>
-                    <input type="radio" name="purpose" value="suggestion"> Website Suggestion
+                <label for="purpose-suggestion">
+                    <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion"> Website Suggestion
                 </label><br>
 
                 <label for="message">Message</label>
                 <textarea id="message" name="message" rows="5" required></textarea>
 
-                <label>
-                    <input type="checkbox" name="newsletter"> Please subscribe me to the monthly newsletter
+                <!-- ✅ Added id and for to checkbox -->
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter"> Please subscribe me to the monthly
+                    newsletter
                 </label>
 
                 <button type="submit">Send Message</button>
@@ -96,6 +103,7 @@
     <footer>
         <p>&copy; 2025 Exciting Expeditions | Emmanuel Eshun</p>
         <nav class="socialmedia">
+            <!-- ✅ Fixed extra spaces in href -->
             <a href="https://facebook.com" target="_blank" rel="noopener">
                 <img src="images/facebook_logo.png" alt="Facebook page for Exciting Expeditions" />
             </a>
