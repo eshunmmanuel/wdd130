@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | Exciting Expeditions</title>
+    <meta name="description"
+        content="Get in touch with Exciting Expeditions for questions, bookings, or feedback. We're here to help with your next white water rafting adventure!" />
+    <meta name="author" content="Emmanuel Eshun" />
+    <link rel="stylesheet" href="styles/rafting.css" />
+</head>
+
+<body>
+    <header>
+        <img src="images/logo.png" alt="Exciting Expeditions Logo" />
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Company Contact Info Section -->
+        <section class="contact-info">
+            <h2>We Are Here to Serve You</h2>
+            <div class="company-details">
+                <p><strong>Exciting Expeditions</strong></p>
+                <p>123 Main River Street<br>Kolob, California</p>
+                <p>📞 +233 544 999 999</p>
+                <p>✉️ <a href="mailto:info@excitingexpeditions.com">info@excitingexpeditions.com</a></p>
+
+                <!-- Embedded Google Map -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d50687.379504849174!2d-113.23073397048638!3d37.43802090018532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80ca91afad231a8f%3A0xec6734a36c88eb1f!2sKolob%20Canyons!5e0!3m2!1sen!2sgh!4v1764952638150!5m2!1sen!2sgh"
+                    width="100%" height="250" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Employee Profiles -->
+        <section class="employee-section">
+            <h2>Meet Our Team</h2>
+            <div class="employees">
+                <div class="employee">
+                    <img src="images/employee1.png" alt="River Guide - Alex Morgan">
+                    <p><strong>Alex Morgan</strong><br>River Guide</p>
+                </div>
+                <div class="employee">
+                    <img src="images/employee2.png" alt="Safety Officer - Taylor Kim">
+                    <p><strong>Miriam Kim</strong><br>Safety Officer</p>
+                </div>
+                <div class="employee">
+                    <img src="images/employee3.png" alt="Trip Coordinator - Jordan Lee">
+                    <p><strong>Jordan Lee</strong><br>Trip Coordinator</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form -->
+        <section class="contact-form-section">
+            <h2>Get in Touch!</h2>
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <p><strong>Purpose</strong></p>
+                <label>
+                    <input type="radio" name="purpose" value="general" required> General Inquiry
+                </label><br>
+                <label>
+                    <input type="radio" name="purpose" value="reservation"> Reservation Question
+                </label><br>
+                <label>
+                    <input type="radio" name="purpose" value="suggestion"> Website Suggestion
+                </label><br>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <label>
+                    <input type="checkbox" name="newsletter"> Please subscribe me to the monthly newsletter
+                </label>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Exciting Expeditions | Emmanuel Eshun</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com" target="_blank" rel="noopener">
+                <img src="images/facebook_logo.png" alt="Facebook page for Exciting Expeditions" />
+            </a>
+            <a href="https://twitter.com" target="_blank" rel="noopener">
+                <img src="images/xlogo.png" alt="Twitter page for Exciting Expeditions" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener">
+                <img src="images/instagram_logo.png" alt="Instagram page for Exciting Expeditions" />
+            </a>
+        </nav>
+    </footer>
+</body>
+
+</html>
