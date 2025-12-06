@@ -24,7 +24,7 @@ body {
   line-height: 1.6;
 }
 
-/* Fluid container: replaces fixed 840px */
+/* Fluid container */
 header,
 main,
 footer {
@@ -64,7 +64,6 @@ header h1 {
   font-size: 1.8rem;
 }
 
-/* Navigation */
 nav {
   display: flex;
   justify-content: flex-start;
@@ -74,22 +73,26 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--primary-color);
+  color: var(--primary-orange, var(--primary-color));
   font-weight: bold;
 }
 
-/* --- Hero Section (for Home Page) --- */
+/* ========== W06: Home Page Styles ========== */
+
+/* Hero Section (background-based, NO <img> inside) */
 .hero {
   position: relative;
   height: 350px;
   background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   margin: 24px 0;
   border-radius: 8px;
   overflow: hidden;
 }
 
+/* Only apply absolute heading inside background-based hero */
 .hero h2 {
   position: absolute;
   top: 50%;
@@ -102,36 +105,50 @@ nav a {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 12px 24px;
   border-radius: 6px;
+  width: fit-content;
+  max-width: 90%;
 }
 
-/* --- Quote from President Monson --- */
+/* Monson Quote */
 .monson-quote {
   font-style: italic;
   text-align: center;
-  padding: 0 16px;
   max-width: 600px;
   margin: 0 auto;
   color: #555;
+  line-height: 1.5;
 }
 
 .monson-quote cite {
   display: block;
-  margin-top: 8px;
+  margin-top: 10px;
   font-weight: bold;
+  font-style: normal;
 }
 
-/* --- Home Page Grid Layout --- */
+/* Home Grid Layout */
 .home-grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  padding: 16px 0;
+  padding: 16px 0 32px;
 }
 
 @media (min-width: 768px) {
   .home-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/* Card Base Style (used on Home and Trips) */
+.card,
+.trip-card,
+.newsletter {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card img,
@@ -145,13 +162,14 @@ nav a {
 .card h3,
 .trip-card h3 {
   margin-top: 0;
+  color: var(--primary-color);
 }
 
-/* Newsletter */
+/* Newsletter Form */
 .newsletter form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .newsletter label {
@@ -159,19 +177,24 @@ nav a {
 }
 
 .newsletter input {
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  font-family: var(--body-font);
 }
 
 .newsletter button {
   background-color: var(--primary-color);
   color: white;
-  padding: 10px;
+  padding: 12px;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.newsletter button:hover {
+  opacity: 0.9;
 }
 
 /* Call to Action */
@@ -182,7 +205,7 @@ nav a {
 
 .cta a {
   display: inline-block;
-  padding: 12px 24px;
+  padding: 12px 28px;
   background-color: #e74c3c;
   color: white;
   text-decoration: none;
@@ -195,12 +218,13 @@ nav a {
   opacity: 0.9;
 }
 
-/* --- Trips Page Styles --- */
+/* ========== W06: Trips Page Styles ========== */
+
 .trips-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  padding: 16px 0;
+  padding: 16px 0 32px;
 }
 
 @media (min-width: 900px) {
@@ -209,16 +233,16 @@ nav a {
   }
 }
 
-/* Trip description cards */
+/* Ensure trip cards look like cards */
 .trip-card {
-  margin-bottom: 24px;
+  margin: 0;
 }
 
 /* Table */
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 16px;
+  margin: 16px 0;
 }
 
 th, td {
@@ -232,41 +256,17 @@ th {
   color: white;
 }
 
-/* Footer */
-footer {
-  margin-top: 30px;
-  padding: 20px 0;
-  border-top: 2px solid var(--primary-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  text-align: center;
-}
+/* ========== W04–W05: About & Contact Legacy Styles ========== */
 
-.socialmedia {
-  display: flex;
-  gap: 15px;
-}
-
-.socialmedia a {
-  text-decoration: none;
-}
-
-.socialmedia img {
-  width: 32px;
-  height: 32px;
-}
-
-/* ========== W04–W05 Legacy Styles (About & Contact) ========== */
-
-/* About Page: Hero (if still used) */
+/* About Page: ONLY for <img>-based hero (not background) */
 .hero img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: 8px;
 }
 
+/* Keep .hero article for About page only */
 .hero article {
   position: absolute;
   bottom: 20px;
@@ -387,4 +387,30 @@ footer {
 
 .contact-form-section button[type="submit"]:hover {
   opacity: 0.9;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 2px solid var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 15px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: 32px;
 }
