@@ -2,52 +2,66 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 130 | Emmanuel Eshun</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wild Water Rafting | Home</title>
     <meta name="description"
-        content="Emmanuel Eshun's course homepage for WDD 130, learning Web Development and Design fundamentals.">
-    <meta name="author" content="Emmanuel Eshun">
-    <link rel="stylesheet" href="styles/styles.css">
+        content="Experience thrilling white water rafting adventures with Wild Water Rafting. Book your trip today!" />
+    <link rel="stylesheet" href="rafting.css" />
 </head>
 
 <body>
     <header>
+        <h1>Wild Water Rafting</h1>
         <nav>
-            <a href="#">Home</a>
-            <a href="wwr/">Rafting Website</a>
-            <!-- ✅ Added LinkedIn & Facebook links -->
-            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
-            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="trips.html">Trips</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
-    <!-- ✅ Wrapped main & aside in .grid -->
-    <div class="grid">
-        <main>
-            <h1>WDD 130 | Emmanuel Eshun</h1>
-            <img src="images/profile.png" alt="A profile picture of Emmanuel Eshun." width="200">
-            <p>
-                Hello! My name is Emmanuel, and I am from Ghana. I'm studying Web Development and Design at BYU, and
-                I'm excited to learn how to build dynamic and accessible websites.
-                When I'm not coding, I enjoy designing and listening to gospel music. I hope to
-                use the skills I learn in this course to become a software developer.
-            </p>
-        </main>
-        <aside>
-            <h2>Ghana</h2>
-            <img src="images/ghana-flag.jpg" alt="A picture of the flag of Ghana." width="200">
-            <p>
-                Ghana is a nation in West Africa known as the 'Gateway to Africa.' It is celebrated for its warm
-                hospitality, vibrant culture, and historical significance, including its role in the global gold and
-                cocoa industries.
-                The capital, Accra, is a bustling coastal city and a hub for technology and commerce.
-            </p>
-        </aside>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Adventure Awaits on the River</h2>
+    </section>
+
+    <!-- Main Content Grid -->
+    <main class="home-grid">
+        <!-- Card 1 -->
+        <section class="card">
+            <img src="images/rafting1.jpg" alt="Group rafting down a wild river" />
+            <h3>Thrilling Rapids</h3>
+            <p>Experience heart-pounding rapids with expert guides and top safety gear.</p>
+        </section>
+
+        <!-- Card 2 -->
+        <section class="card">
+            <img src="images/scenic.jpg" alt="Scenic river canyon with calm water" />
+            <h3>Scenic Journeys</h3>
+            <p>Enjoy peaceful floats through breathtaking canyons and wildlife zones.</p>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter">
+            <h3>Join Our Adventure Club</h3>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta">
+            <a href="trips.html">Explore Our Trips 🌊</a>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2025 | Emmanuel Eshun | Ghana, Accra</p>
+        <p>&copy; 2025 Wild Water Rafting | Accra, Ghana</p>
     </footer>
 </body>
 
