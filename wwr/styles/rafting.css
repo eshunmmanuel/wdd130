@@ -1,4 +1,4 @@
-/* W04: Rafting Site — About Us Page Styles */
+/* W04–W06: Rafting Site — Unified Styles */
 
 /* Define CSS custom properties */
 :root {
@@ -24,33 +24,34 @@ body {
   line-height: 1.6;
 }
 
-/* Layout container */
+/* Fluid container: replaces fixed 840px */
 header,
 main,
 footer {
-  width: 840px;
+  max-width: 840px;
   margin: 0 auto;
   padding: 0 16px;
 }
 
 /* Headings */
 h1,
-h2 {
+h2,
+h3 {
   font-family: var(--heading-font);
   color: var(--primary-color);
   margin: 16px 0;
 }
 
-/* Spacing */
+/* General spacing */
 nav,
 p,
 section,
-article {
+article,
+blockquote {
   margin: 16px 0;
-  padding: 8px 0;
 }
 
-/* Header layout using CSS Grid */
+/* --- Header & Navigation --- */
 header {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -59,15 +60,16 @@ header {
   padding: 16px 0;
 }
 
-header img {
-  height: 60px;
+header h1 {
+  font-size: 1.8rem;
 }
 
-/* Navigation using Flexbox */
+/* Navigation */
 nav {
   display: flex;
   justify-content: flex-start;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 nav a {
@@ -76,30 +78,193 @@ nav a {
   font-weight: bold;
 }
 
-/* Hero section */
+/* --- Hero Section (for Home Page) --- */
 .hero {
   position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+  height: 350px;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  margin: 24px 0;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
+.hero h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.2rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 12px 24px;
+  border-radius: 6px;
+}
+
+/* --- Quote from President Monson --- */
+.monson-quote {
+  font-style: italic;
+  text-align: center;
+  padding: 0 16px;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #555;
+}
+
+.monson-quote cite {
+  display: block;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+/* --- Home Page Grid Layout --- */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 16px 0;
+}
+
+@media (min-width: 768px) {
+  .home-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card img,
+.trip-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+
+.card h3,
+.trip-card h3 {
+  margin-top: 0;
+}
+
+/* Newsletter */
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.newsletter label {
+  font-weight: bold;
+}
+
+.newsletter input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.newsletter button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Call to Action */
+.cta {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.cta a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #e74c3c;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.cta a:hover {
+  opacity: 0.9;
+}
+
+/* --- Trips Page Styles --- */
+.trips-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 16px 0;
+}
+
+@media (min-width: 900px) {
+  .trips-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Trip description cards */
+.trip-card {
+  margin-bottom: 24px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  padding: 20px 0;
+  border-top: 2px solid var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.socialmedia {
+  display: flex;
+  gap: 15px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.socialmedia img {
+  width: 32px;
+  height: 32px;
+}
+
+/* ========== W04–W05 Legacy Styles (About & Contact) ========== */
+
+/* About Page: Hero (if still used) */
 .hero img {
   display: block;
   width: 100%;
   height: auto;
-}
-
-.hero h1 {
-  position: absolute;
-  top: 20px;
-  width: 100%;
-  padding: 16px;
-  text-align: center;
-  background-color: var(--accent1-color);
-  color: white;
-  opacity: 0.9;
-  font-size: 2.2rem;
 }
 
 .hero article {
@@ -121,16 +286,7 @@ nav a {
   border-radius: 4px;
 }
 
-/* History section */
-.history {
-  padding: 20px 0;
-}
-
-/* Adventures section with 5 images */
-.adventures {
-  padding: 20px 0;
-}
-
+/* Adventures Gallery */
 .adventures .gallery {
   display: flex;
   justify-content: space-between;
@@ -156,53 +312,13 @@ nav a {
   color: var(--primary-color);
 }
 
-/* Footer */
-footer {
-  margin-top: 30px;
-  padding: 20px 0;
-  border-top: 2px solid var(--primary-color);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-
-.socialmedia {
-  display: flex;
-  gap: 15px;
-}
-
-.socialmedia a {
-  text-decoration: none;
-}
-
-.socialmedia img {
-  width: 32px;
-  height: 32px;
-}
-
-/* ==============================
-   W05: Contact Page Styles
-   ============================== */
-
-/* Reuse main container width and centering */
+/* Contact Page */
 .contact-info,
 .employee-section,
 .contact-form-section {
-  width: 840px;
+  max-width: 840px;
   margin: 0 auto 24px;
   padding: 0 16px;
-}
-
-/* Contact Info Section */
-.contact-info h2 {
-  text-align: center;
-}
-
-.company-details {
-  text-align: center;
-  margin-top: 16px;
-  line-height: 1.6;
 }
 
 .company-details iframe {
@@ -211,11 +327,6 @@ footer {
   height: 250px;
   border: 2px solid #ddd;
   border-radius: 8px;
-}
-
-/* Employee Section */
-.employee-section h2 {
-  text-align: center;
 }
 
 .employees {
@@ -239,11 +350,6 @@ footer {
   margin-bottom: 8px;
 }
 
-/* Contact Form Section */
-.contact-form-section h2 {
-  text-align: center;
-}
-
 .contact-form-section form {
   max-width: 600px;
   margin: 16px auto 0;
@@ -257,12 +363,6 @@ footer {
   margin: 4px 0;
 }
 
-/* Radio buttons inline */
-.contact-form-section input[type="radio"] {
-  margin-right: 8px;
-}
-
-/* Form inputs */
 .contact-form-section input[type="text"],
 .contact-form-section input[type="email"],
 .contact-form-section textarea {
@@ -270,15 +370,8 @@ footer {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: var(--body-font);
-  font-size: 1rem;
 }
 
-.contact-form-section textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-/* Submit Button — reuse primary color */
 .contact-form-section button[type="submit"] {
   background-color: var(--primary-color);
   color: white;
