@@ -1,4 +1,4 @@
-/* W04–W06: Rafting Site — Unified & Compliant Styles */
+/* W04–W06: Rafting Site — Unified & Visually Enhanced Styles */
 
 :root {
   --primary-color: #1a5d1a;
@@ -6,6 +6,8 @@
   --background-color: #f8f9fa;
   --heading-font: 'Georgia', 'Times New Roman', serif;
   --body-font: 'Arial', sans-serif;
+  --secondary-color: #e74c3c;
+  --light-gray: #f0f0f0;
 }
 
 * {
@@ -21,7 +23,7 @@ body {
   line-height: 1.6;
 }
 
-/* Fluid container for all pages */
+/* Fluid container */
 header,
 main,
 footer {
@@ -44,20 +46,22 @@ nav, p, section, article, blockquote {
 
 /* Header & Navigation */
 header {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 20px;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 16px 0;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 header h1 {
   font-size: 1.8rem;
+  color: var(--primary-color);
+  font-weight: bold;
 }
 
 nav {
   display: flex;
-  justify-content: flex-start;
   gap: 20px;
   flex-wrap: wrap;
 }
@@ -66,14 +70,19 @@ nav a {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: var(--secondary-color);
 }
 
 /* ========== W06: HOME PAGE STYLES ========== */
 
-/* Hero Section (background-based) */
+/* Hero Section */
 .hero {
   position: relative;
-  height: 350px;
+  height: 400px;
   background-image: url('images/hero.jpg');
   background-size: cover;
   background-position: center;
@@ -81,22 +90,24 @@ nav a {
   margin: 24px 0;
   border-radius: 8px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero .hero-content {
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 8px;
+  max-width: 80%;
 }
 
 .hero h2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 2.2rem;
-  text-align: center;
+  font-size: 2.5rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 12px 24px;
-  border-radius: 6px;
-  width: fit-content;
-  max-width: 90%;
+  margin: 0;
 }
 
 /* Monson Quote */
@@ -107,6 +118,10 @@ nav a {
   margin: 0 auto;
   color: #555;
   line-height: 1.5;
+  padding: 20px;
+  background-color: var(--light-gray);
+  border-radius: 8px;
+  font-size: 0.95rem;
 }
 
 .monson-quote cite {
@@ -130,7 +145,7 @@ nav a {
   }
 }
 
-/* Card Base */
+/* Card Base Style */
 .card,
 .trip-card,
 .newsletter {
@@ -139,6 +154,13 @@ nav a {
   border-radius: 8px;
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover,
+.trip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card img,
@@ -147,12 +169,19 @@ nav a {
   height: auto;
   border-radius: 6px;
   margin-bottom: 12px;
+  transition: filter 0.2s;
+}
+
+.card img:hover,
+.trip-card img:hover {
+  filter: brightness(90%);
 }
 
 .card h3,
 .trip-card h3 {
   margin-top: 0;
   color: var(--primary-color);
+  font-size: 1.3rem;
 }
 
 /* Newsletter Form */
@@ -164,6 +193,7 @@ nav a {
 
 .newsletter label {
   font-weight: bold;
+  color: var(--accent1-color);
 }
 
 .newsletter input {
@@ -172,6 +202,12 @@ nav a {
   border-radius: 4px;
   font-family: var(--body-font);
   font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.newsletter input:focus {
+  border-color: var(--primary-color);
+  outline: none;
 }
 
 .newsletter button {
@@ -182,10 +218,11 @@ nav a {
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .newsletter button:hover {
-  opacity: 0.9;
+  background-color: #144a14;
 }
 
 /* Call to Action Button */
@@ -197,16 +234,18 @@ nav a {
 .cta a {
   display: inline-block;
   padding: 12px 28px;
-  background-color: #e74c3c;
+  background-color: var(--secondary-color);
   color: white;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
   font-size: 1.1rem;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
 .cta a:hover {
-  opacity: 0.9;
+  background-color: #d04132;
+  transform: scale(1.05);
 }
 
 /* ========== W06: TRIPS PAGE STYLES ========== */
@@ -229,6 +268,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 16px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 th, td {
@@ -240,6 +280,7 @@ th, td {
 th {
   background-color: var(--primary-color);
   color: white;
+  font-weight: bold;
 }
 
 /* ========== W04–W05: About & Contact Legacy Styles ========== */
@@ -384,6 +425,8 @@ footer {
   align-items: center;
   flex-wrap: wrap;
   text-align: center;
+  background-color: white;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
 
 .socialmedia {
