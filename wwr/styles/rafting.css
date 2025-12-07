@@ -1,6 +1,5 @@
-/* W04–W06: Rafting Site — Unified Styles */
+/* W04–W06: Rafting Site — Unified & Compliant Styles */
 
-/* Define CSS custom properties */
 :root {
   --primary-color: #1a5d1a;
   --accent1-color: #333;
@@ -9,14 +8,12 @@
   --body-font: 'Arial', sans-serif;
 }
 
-/* ✅ REQUIRED: Universal selector reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Body styles */
 body {
   font-family: var(--body-font);
   color: var(--accent1-color);
@@ -24,7 +21,7 @@ body {
   line-height: 1.6;
 }
 
-/* Fluid container */
+/* Fluid container for all pages */
 header,
 main,
 footer {
@@ -34,24 +31,18 @@ footer {
 }
 
 /* Headings */
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   font-family: var(--heading-font);
   color: var(--primary-color);
   margin: 16px 0;
 }
 
 /* General spacing */
-nav,
-p,
-section,
-article,
-blockquote {
+nav, p, section, article, blockquote {
   margin: 16px 0;
 }
 
-/* --- Header & Navigation --- */
+/* Header & Navigation */
 header {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -73,13 +64,13 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: var(--primary-orange, var(--primary-color));
+  color: var(--primary-color);
   font-weight: bold;
 }
 
-/* ========== W06: Home Page Styles ========== */
+/* ========== W06: HOME PAGE STYLES ========== */
 
-/* Hero Section (background-based, NO <img> inside) */
+/* Hero Section (background-based) */
 .hero {
   position: relative;
   height: 350px;
@@ -92,7 +83,6 @@ nav a {
   overflow: hidden;
 }
 
-/* Only apply absolute heading inside background-based hero */
 .hero h2 {
   position: absolute;
   top: 50%;
@@ -140,7 +130,7 @@ nav a {
   }
 }
 
-/* Card Base Style (used on Home and Trips) */
+/* Card Base */
 .card,
 .trip-card,
 .newsletter {
@@ -181,6 +171,7 @@ nav a {
   border: 1px solid #ccc;
   border-radius: 4px;
   font-family: var(--body-font);
+  font-size: 1rem;
 }
 
 .newsletter button {
@@ -197,7 +188,7 @@ nav a {
   opacity: 0.9;
 }
 
-/* Call to Action */
+/* Call to Action Button */
 .cta {
   grid-column: 1 / -1;
   text-align: center;
@@ -218,7 +209,7 @@ nav a {
   opacity: 0.9;
 }
 
-/* ========== W06: Trips Page Styles ========== */
+/* ========== W06: TRIPS PAGE STYLES ========== */
 
 .trips-container {
   display: grid;
@@ -231,11 +222,6 @@ nav a {
   .trips-container {
     grid-template-columns: 1fr 1fr;
   }
-}
-
-/* Ensure trip cards look like cards */
-.trip-card {
-  margin: 0;
 }
 
 /* Table */
@@ -258,7 +244,7 @@ th {
 
 /* ========== W04–W05: About & Contact Legacy Styles ========== */
 
-/* About Page: ONLY for <img>-based hero (not background) */
+/* Only used on about.html if it contains <img> inside .hero */
 .hero img {
   display: block;
   width: 100%;
@@ -266,7 +252,6 @@ th {
   border-radius: 8px;
 }
 
-/* Keep .hero article for About page only */
 .hero article {
   position: absolute;
   bottom: 20px;
@@ -286,7 +271,7 @@ th {
   border-radius: 4px;
 }
 
-/* Adventures Gallery */
+/* Adventures Gallery (About Page) */
 .adventures .gallery {
   display: flex;
   justify-content: space-between;
