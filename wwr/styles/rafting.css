@@ -51,11 +51,24 @@ header {
   align-items: center;
   padding: 16px 0;
   background-color: white;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-header h1 {
-  font-size: 1.8rem;
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-container img {
+  height: 50px;
+  width: auto;
+  border-radius: 6px; /* optional: softens sharp edges */
+}
+
+.logo-container h1 {
+  font-size: 1.6rem;
+  margin: 0;
   color: var(--primary-color);
   font-weight: bold;
 }
@@ -74,7 +87,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--secondary-color);
+  color: #e74c3c; /* accent hover color */
 }
 
 /* ========== W06: HOME PAGE STYLES ========== */
