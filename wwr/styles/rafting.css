@@ -245,30 +245,19 @@ th {
 /* ========== W04–W05: About & Contact Legacy Styles ========== */
 
 /* Only used on about.html if it contains <img> inside .hero */
-.hero img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
+.hero {
+  position: relative;
+  height: 400px;
+  background-image: url('images/hero.jpg');
+  background-size: cover;
 }
-
-.hero article {
+.hero h2 {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 16px;
-  border-radius: 8px;
-  max-width: 600px;
-}
-
-.hero article img {
-  float: right;
-  width: 125px;
-  height: auto;
-  margin: 0 0 10px 15px;
-  border-radius: 4px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  /* ... */
 }
 
 /* Adventures Gallery (About Page) */
